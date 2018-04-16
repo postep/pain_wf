@@ -45,9 +45,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDownMin = new System.Windows.Forms.NumericUpDown();
             this.button3 = new System.Windows.Forms.Button();
+            this.statusBar1 = new System.Windows.Forms.StatusBar();
+            this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
+            this.statusBarPanel2 = new System.Windows.Forms.StatusBarPanel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -229,11 +234,35 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // statusBar1
+            // 
+            this.statusBar1.Location = new System.Drawing.Point(0, 416);
+            this.statusBar1.Name = "statusBar1";
+            this.statusBar1.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
+            this.statusBarPanel1,
+            this.statusBarPanel2});
+            this.statusBar1.ShowPanels = true;
+            this.statusBar1.Size = new System.Drawing.Size(507, 22);
+            this.statusBar1.TabIndex = 7;
+            this.statusBar1.Text = "statusBar1";
+            this.statusBar1.PanelClick += new System.Windows.Forms.StatusBarPanelClickEventHandler(this.statusBar1_PanelClick);
+            // 
+            // statusBarPanel1
+            // 
+            this.statusBarPanel1.Name = "statusBarPanel1";
+            this.statusBarPanel1.Text = "statusBarPanel1";
+            // 
+            // statusBarPanel2
+            // 
+            this.statusBarPanel2.Name = "statusBarPanel2";
+            this.statusBarPanel2.Text = "statusBarPanel2";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 411);
+            this.ClientSize = new System.Drawing.Size(507, 438);
+            this.Controls.Add(this.statusBar1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
@@ -246,6 +275,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +300,8 @@
         private System.Windows.Forms.CheckBox checkBoxReverseFilter;
         private System.Windows.Forms.CheckBox checkBoxActivateFilter;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.StatusBar statusBar1;
+        private System.Windows.Forms.StatusBarPanel statusBarPanel1;
+        private System.Windows.Forms.StatusBarPanel statusBarPanel2;
     }
 }

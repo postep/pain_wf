@@ -45,8 +45,6 @@ namespace WindowsFormsApplication1
 
             dv = new DataView(dt);
             setFilter();
-
-           
         }
 
         private List<Car> generateCarList()
@@ -76,7 +74,8 @@ namespace WindowsFormsApplication1
                 listView1.Items.Remove(listView1.SelectedItems[i]);
                 dt.Rows.RemoveAt(index);
             }
-            
+            statusBar1.Panels[0].Text = "Wyświetlanych: " + listView1.Items.Count;
+            statusBar1.Panels[1].Text = "Wszytkich: " + dt.Rows.Count;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -126,6 +125,8 @@ namespace WindowsFormsApplication1
                 listView1.Items.Add(lvi);
             }
 
+            statusBar1.Panels[0].Text = "Wyświetlanych: "+listView1.Items.Count;
+            statusBar1.Panels[1].Text = "Wszytkich: " + dt.Rows.Count;
         }
 
         private void checkBoxActivateFilter_CheckedChanged(object sender, EventArgs e)
@@ -168,6 +169,11 @@ namespace WindowsFormsApplication1
                     setFilter();
                 }
             }
+        }
+
+        private void statusBar1_PanelClick(object sender, StatusBarPanelClickEventArgs e)
+        {
+
         }
     }
 }
