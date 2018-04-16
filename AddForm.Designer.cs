@@ -32,18 +32,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.typeSelector1 = new WindowsFormsApplication1.TypeSelector();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxPlate = new System.Windows.Forms.TextBox();
             this.textBoxModel = new System.Windows.Forms.TextBox();
             this.textBoxMake = new System.Windows.Forms.TextBox();
-            this.typeSelector1 = new WindowsFormsApplication1.TypeSelector();
             this.numericUpDownYear = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownSpeed = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed)).BeginInit();
@@ -113,15 +113,12 @@
             this.label3.Text = "Model";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // typeSelector1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 188);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Rok prod.";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.typeSelector1.Location = new System.Drawing.Point(210, 285);
+            this.typeSelector1.Name = "typeSelector1";
+            this.typeSelector1.Size = new System.Drawing.Size(58, 29);
+            this.typeSelector1.TabIndex = 5;
             // 
             // label5
             // 
@@ -132,24 +129,15 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Nr. rej.";
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 285);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
-            // 
-            // button1
-            // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(210, 379);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Rok prod.";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label7
             // 
@@ -190,13 +178,6 @@
             this.textBoxMake.Size = new System.Drawing.Size(162, 20);
             this.textBoxMake.TabIndex = 0;
             // 
-            // typeSelector1
-            // 
-            this.typeSelector1.Location = new System.Drawing.Point(210, 285);
-            this.typeSelector1.Name = "typeSelector1";
-            this.typeSelector1.Size = new System.Drawing.Size(58, 29);
-            this.typeSelector1.TabIndex = 5;
-            // 
             // numericUpDownYear
             // 
             this.numericUpDownYear.Location = new System.Drawing.Point(210, 191);
@@ -211,6 +192,26 @@
             this.numericUpDownSpeed.Size = new System.Drawing.Size(120, 20);
             this.numericUpDownSpeed.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button1.Location = new System.Drawing.Point(210, 379);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "OK";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 285);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "label6";
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,7 +221,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Name = "AddForm";
-            this.Text = "Form2";
+            this.Text = "Samochód";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYear)).EndInit();

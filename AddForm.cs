@@ -37,5 +37,14 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            car = new Car(textBoxMake.Text, textBoxModel.Text, typeSelector1.t, (int)numericUpDownYear.Value, textBoxPlate.Text, (int)numericUpDownSpeed.Value);
+            if (car.isValid())
+            {
+                
+            }
+        }
     }
 }

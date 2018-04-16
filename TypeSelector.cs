@@ -12,33 +12,41 @@ namespace WindowsFormsApplication1
 {
     public partial class TypeSelector : UserControl
     {
-        public string type { get; set; }
+        public string t
+        {
+            get { return t; }
+            set
+            {
+                if (value == "Osobowy")
+                {
+                    button1.BackColor = SystemColors.ControlDarkDark;
+                    button2.BackColor = SystemColors.Control;
+                }
+                else
+                {
+                    button2.BackColor = SystemColors.ControlDarkDark;
+                    button1.BackColor = SystemColors.Control;
+                }
+            }
+        }
         public TypeSelector()
         {
             InitializeComponent();
-            setCar();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            setCar();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            setMotorcycle();
-        }
-
-        private void setCar()
-        {
-            type = "Osobowy";
+            t = "Osobowy";
             button1.BackColor = SystemColors.ControlDarkDark;
             button2.BackColor = SystemColors.Control;
         }
 
-        private void setMotorcycle()
+        private void button1_Click(object sender, EventArgs e)
         {
-            type = "Motocykl";
+            t = "Osobowy";
+            button1.BackColor = SystemColors.ControlDarkDark;
+            button2.BackColor = SystemColors.Control;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            t = "Motocykl";
             button2.BackColor = SystemColors.ControlDarkDark;
             button1.BackColor = SystemColors.Control;
         }
