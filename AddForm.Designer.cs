@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.typeSelector1 = new WindowsFormsApplication1.TypeSelector();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.numericUpDownSpeed = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.typeSelector1 = new WindowsFormsApplication1.TypeSelector();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed)).BeginInit();
@@ -52,7 +52,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 47);
+            this.label1.Location = new System.Drawing.Point(3, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 0;
@@ -99,31 +99,24 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(414, 431);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(414, 304);
             this.tableLayoutPanel1.TabIndex = 2;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 94);
+            this.label3.Location = new System.Drawing.Point(3, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Model";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // typeSelector1
-            // 
-            this.typeSelector1.Location = new System.Drawing.Point(210, 285);
-            this.typeSelector1.Name = "typeSelector1";
-            this.typeSelector1.Size = new System.Drawing.Size(58, 29);
-            this.typeSelector1.TabIndex = 5;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 235);
+            this.label5.Location = new System.Drawing.Point(3, 165);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 4;
@@ -132,7 +125,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 188);
+            this.label4.Location = new System.Drawing.Point(3, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 3;
@@ -142,7 +135,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 282);
+            this.label7.Location = new System.Drawing.Point(3, 198);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 7;
@@ -151,7 +144,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 141);
+            this.label8.Location = new System.Drawing.Point(3, 99);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 13);
             this.label8.TabIndex = 8;
@@ -159,43 +152,72 @@
             // 
             // textBoxPlate
             // 
-            this.textBoxPlate.Location = new System.Drawing.Point(210, 238);
+            this.textBoxPlate.Location = new System.Drawing.Point(210, 168);
             this.textBoxPlate.Name = "textBoxPlate";
             this.textBoxPlate.Size = new System.Drawing.Size(162, 20);
             this.textBoxPlate.TabIndex = 4;
             // 
             // textBoxModel
             // 
-            this.textBoxModel.Location = new System.Drawing.Point(210, 97);
+            this.textBoxModel.Location = new System.Drawing.Point(210, 69);
             this.textBoxModel.Name = "textBoxModel";
             this.textBoxModel.Size = new System.Drawing.Size(162, 20);
             this.textBoxModel.TabIndex = 1;
             // 
             // textBoxMake
             // 
-            this.textBoxMake.Location = new System.Drawing.Point(210, 50);
+            this.textBoxMake.Location = new System.Drawing.Point(210, 36);
             this.textBoxMake.Name = "textBoxMake";
             this.textBoxMake.Size = new System.Drawing.Size(162, 20);
             this.textBoxMake.TabIndex = 0;
             // 
             // numericUpDownYear
             // 
-            this.numericUpDownYear.Location = new System.Drawing.Point(210, 191);
+            this.numericUpDownYear.Location = new System.Drawing.Point(210, 135);
+            this.numericUpDownYear.Maximum = new decimal(new int[] {
+            2100,
+            0,
+            0,
+            0});
+            this.numericUpDownYear.Minimum = new decimal(new int[] {
+            1970,
+            0,
+            0,
+            0});
             this.numericUpDownYear.Name = "numericUpDownYear";
             this.numericUpDownYear.Size = new System.Drawing.Size(120, 20);
             this.numericUpDownYear.TabIndex = 3;
+            this.numericUpDownYear.Value = new decimal(new int[] {
+            2010,
+            0,
+            0,
+            0});
             // 
             // numericUpDownSpeed
             // 
-            this.numericUpDownSpeed.Location = new System.Drawing.Point(210, 144);
+            this.numericUpDownSpeed.Location = new System.Drawing.Point(210, 102);
+            this.numericUpDownSpeed.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numericUpDownSpeed.Minimum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.numericUpDownSpeed.Name = "numericUpDownSpeed";
             this.numericUpDownSpeed.Size = new System.Drawing.Size(120, 20);
             this.numericUpDownSpeed.TabIndex = 2;
+            this.numericUpDownSpeed.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             // 
             // button1
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(210, 379);
+            this.button1.Location = new System.Drawing.Point(210, 267);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -212,11 +234,19 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "label6";
             // 
+            // typeSelector1
+            // 
+            this.typeSelector1.Location = new System.Drawing.Point(210, 201);
+            this.typeSelector1.Name = "typeSelector1";
+            this.typeSelector1.Size = new System.Drawing.Size(58, 27);
+            this.typeSelector1.t = "Osobowy";
+            this.typeSelector1.TabIndex = 5;
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 431);
+            this.ClientSize = new System.Drawing.Size(414, 304);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);

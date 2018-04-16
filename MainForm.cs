@@ -154,21 +154,19 @@ namespace WindowsFormsApplication1
             {
                 int index = listView1.SelectedItems[0].Index;
                 DataRow row = dt.Rows[index];
-                Car car = new Car(row[0].ToString(), row[1].ToString(), row[2].ToString(), (int)row[3], row[4].ToString(), (int)row[5]);
-                dt.Rows.RemoveAt(index);
-            }
-            /*for (int i = listView1.SelectedItems.Count - 1; i >= 0; i--)
-            {
-                int index = listView1.SelectedItems[i].Index;
-                listView1.Items.Remove(listView1.SelectedItems[i]);
-                dt.Rows.RemoveAt(index);
-            }*/
-            var f = new AddForm();
-            if (f.ShowDialog() == DialogResult.OK)
-            {
-                var car = f.car;
-                dt.Rows.Add(car.Make, car.Model, car.Type, car.Year.ToString(), car.Plate, car.Speed.ToString());
-                setFilter();
+                Car c = new Car(row[0].ToString(), row[1].ToString(), row[2].ToString(), Convert.ToInt32(row[3]), row[4].ToString(), Convert.ToInt32(row[5]));
+                var f = new AddForm(c);
+                if (f.ShowDialog() == DialogResult.OK)
+                {
+                    var car = f.car;
+                    row[0] = car.Make;
+                    row[1] = car.Model;
+                    row[2] = car.Type;
+                    row[3] = car.Year;
+                    row[4] = car.Plate;
+                    row[5] = car.Speed;
+                    setFilter();
+                }
             }
         }
     }

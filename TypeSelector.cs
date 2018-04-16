@@ -14,20 +14,8 @@ namespace WindowsFormsApplication1
     {
         public string t
         {
-            get { return t; }
-            set
-            {
-                if (value == "Osobowy")
-                {
-                    button1.BackColor = SystemColors.ControlDarkDark;
-                    button2.BackColor = SystemColors.Control;
-                }
-                else
-                {
-                    button2.BackColor = SystemColors.ControlDarkDark;
-                    button1.BackColor = SystemColors.Control;
-                }
-            }
+            get;set;
+            
         }
         public TypeSelector()
         {
@@ -49,6 +37,22 @@ namespace WindowsFormsApplication1
             t = "Motocykl";
             button2.BackColor = SystemColors.ControlDarkDark;
             button1.BackColor = SystemColors.Control;
+        }
+
+        public void setT(string t)
+        {
+            if (t == "Osobowy")
+            {
+                this.t = "Osobowy";
+                button1.BackColor = SystemColors.ControlDarkDark;
+                button2.BackColor = SystemColors.Control;
+            }
+            else
+            {
+                this.t = "Motocykl";
+                button2.BackColor = SystemColors.ControlDarkDark;
+                button1.BackColor = SystemColors.Control;
+            }
         }
     }
 }

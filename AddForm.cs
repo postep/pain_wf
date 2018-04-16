@@ -18,6 +18,16 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        public AddForm(Car car)
+        {
+            InitializeComponent();
+            textBoxMake.Text = car.Make;
+            textBoxModel.Text = car.Model;
+            typeSelector1.setT(car.Type);
+            numericUpDownYear.Value = car.Year;
+            textBoxPlate.Text = car.Plate;
+            numericUpDownSpeed.Value = car.Speed;
+        }
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -43,7 +53,11 @@ namespace WindowsFormsApplication1
             car = new Car(textBoxMake.Text, textBoxModel.Text, typeSelector1.t, (int)numericUpDownYear.Value, textBoxPlate.Text, (int)numericUpDownSpeed.Value);
             if (car.isValid())
             {
-                
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("Wypełnij dane poprawnie");
             }
         }
     }

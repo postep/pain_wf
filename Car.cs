@@ -47,7 +47,7 @@ namespace WindowsFormsApplication1
         public bool isValid()
         {
             return (Make.Length != 0 & Model.Length != 0 & Year >= 1970 & Year < 2200 & 
-                Speed > 30 & Speed < 500 & Plate.Length > 5 & Plate.Length < 10 &
+                Speed >= 30 & Speed <= 500 & Plate.Length > 5 & Plate.Length < 10 &
                 (Type == "Motocykl" | Type == "Osobowy"));
         }
         public Car(string make, string model, string type, int year, string plate, int speed)
