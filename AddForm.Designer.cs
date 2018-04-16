@@ -32,8 +32,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxPlate = new System.Windows.Forms.TextBox();
+            this.textBoxModel = new System.Windows.Forms.TextBox();
+            this.textBoxMake = new System.Windows.Forms.TextBox();
             this.typeSelector1 = new WindowsFormsApplication1.TypeSelector();
+            this.numericUpDownYear = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownSpeed = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -41,9 +54,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "Marka";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -63,6 +76,16 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.typeSelector1, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxPlate, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxModel, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxMake, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDownYear, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDownSpeed, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -85,17 +108,108 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
+            this.label3.Text = "Model";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Rok prod.";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 235);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Nr. rej.";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 285);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "label6";
+            // 
+            // button1
+            // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button1.Location = new System.Drawing.Point(210, 379);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "OK";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 282);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Rodzaj";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 141);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Prędkość maks.";
+            // 
+            // textBoxPlate
+            // 
+            this.textBoxPlate.Location = new System.Drawing.Point(210, 238);
+            this.textBoxPlate.Name = "textBoxPlate";
+            this.textBoxPlate.Size = new System.Drawing.Size(162, 20);
+            this.textBoxPlate.TabIndex = 4;
+            // 
+            // textBoxModel
+            // 
+            this.textBoxModel.Location = new System.Drawing.Point(210, 97);
+            this.textBoxModel.Name = "textBoxModel";
+            this.textBoxModel.Size = new System.Drawing.Size(162, 20);
+            this.textBoxModel.TabIndex = 1;
+            // 
+            // textBoxMake
+            // 
+            this.textBoxMake.Location = new System.Drawing.Point(210, 50);
+            this.textBoxMake.Name = "textBoxMake";
+            this.textBoxMake.Size = new System.Drawing.Size(162, 20);
+            this.textBoxMake.TabIndex = 0;
             // 
             // typeSelector1
             // 
             this.typeSelector1.Location = new System.Drawing.Point(210, 285);
             this.typeSelector1.Name = "typeSelector1";
             this.typeSelector1.Size = new System.Drawing.Size(58, 29);
-            this.typeSelector1.TabIndex = 2;
+            this.typeSelector1.TabIndex = 5;
+            // 
+            // numericUpDownYear
+            // 
+            this.numericUpDownYear.Location = new System.Drawing.Point(210, 191);
+            this.numericUpDownYear.Name = "numericUpDownYear";
+            this.numericUpDownYear.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownYear.TabIndex = 3;
+            // 
+            // numericUpDownSpeed
+            // 
+            this.numericUpDownSpeed.Location = new System.Drawing.Point(210, 144);
+            this.numericUpDownSpeed.Name = "numericUpDownSpeed";
+            this.numericUpDownSpeed.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownSpeed.TabIndex = 2;
             // 
             // AddForm
             // 
@@ -104,10 +218,13 @@
             this.ClientSize = new System.Drawing.Size(414, 431);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label6);
             this.Name = "AddForm";
             this.Text = "Form2";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,5 +237,16 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label3;
         private TypeSelector typeSelector1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxPlate;
+        private System.Windows.Forms.TextBox textBoxModel;
+        private System.Windows.Forms.TextBox textBoxMake;
+        private System.Windows.Forms.NumericUpDown numericUpDownYear;
+        private System.Windows.Forms.NumericUpDown numericUpDownSpeed;
     }
 }
